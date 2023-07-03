@@ -1,0 +1,17 @@
+%chip {
+    padding: var(--spacing-4) var(--spacing-12);
+    border-radius: var(--border-radius-4);
+    border: var(--border-width-1) solid var(--color-black);
+}
+
+.chip--selected {
+    @extend %chip;
+    background-color: var(--color-black);
+    color: var(--color-white);
+}   
+
+.chip--unselected {
+    @extend %chip;
+    background-color: var(--color-transparent);
+    color: var(--color-black);
+}
