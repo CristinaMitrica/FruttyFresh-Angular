@@ -1,0 +1,19 @@
+@import 'exports';
+
+.all-products__filters {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-16);
+  text-align: center;
+  margin-bottom: var(--spacing-32);
+
+  @include breakpoint($break-small) {
+      display: flex;
+  }
+}
+
+.all-products__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(#{pxToRem(350px)}, 1fr));
+  gap: var(--spacing-40);
+}
