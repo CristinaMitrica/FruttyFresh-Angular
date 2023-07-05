@@ -1,0 +1,19 @@
+@import 'exports';
+
+.header {
+  background-color: var(--color-low-grey);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-12) var(--spacing-32);
+  position: sticky;
+  z-index: var(--zindex-header);
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.header__logo {
+  height: #{pxToRem(20px)};
+  width: #{pxToRem(148px)};
+}
