@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/shared/models/products.models';
-import { CartFetchService } from 'src/shared/services/fetchs/cart-fetch.service';
+import { CartService } from 'src/shared/services/cart.service';
 import { ProductsFetchService } from 'src/shared/services/fetchs/products-fetch.service';
 
 @Component({
@@ -12,7 +12,7 @@ export class AllProductsComponent implements OnInit {
   public products:Product[] = [];
 
   constructor (
-    private cartFetchService: CartFetchService,
+    private cartService: CartService,
     private productsFetchService: ProductsFetchService,
   ) {}
 

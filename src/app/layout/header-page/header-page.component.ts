@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CartFetchService } from 'src/shared/services/fetchs/cart-fetch.service';
+import { CartService } from 'src/shared/services/cart.service';
 
 @Component({
   selector: 'app-header-page',
@@ -11,7 +11,7 @@ export class HeaderPageComponent {
   public cartCounter: number | null = null;
 
   constructor (
-    private cartFetchService: CartFetchService,
+    private cartService: CartService,
   ) {}
 
   ngOnInit():void {
@@ -19,7 +19,7 @@ export class HeaderPageComponent {
   }
 
   private getcartCounter():void {
-    this.cartFetchService.getcartCounter().subscribe((response) =>
+    this.cartService.getcartCounter().subscribe((response) =>
       {
         this.cartCounter = response;
       }

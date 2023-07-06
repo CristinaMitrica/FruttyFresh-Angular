@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Product } from 'src/shared/models/products.models';
-import { CartFetchService } from 'src/shared/services/fetchs/cart-fetch.service';
+import { CartService } from 'src/shared/services/cart.service';
 
 @Component({
   selector: 'app-product-card',
@@ -11,14 +11,14 @@ export class ProductCardComponent {
   @Input() public product!: Product;
 
   constructor (
-    private cartFetchService: CartFetchService,
+    private cartService: CartService,
   ) {}
 
   public addProductToCart(product:Product):void {
-    this.cartFetchService.addProduct(product);
+    this.cartService.addProduct(product);
   }
 
   public removeProductFromCart(product:Product):void {
-    this.cartFetchService.removeProduct(product);
+    this.cartService.removeProduct(product);
   }
 }
