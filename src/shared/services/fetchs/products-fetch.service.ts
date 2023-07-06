@@ -14,31 +14,37 @@ export class ProductsFetchService {
       {
         data: [
           {
+              id: 1,
               name: 'Pera',
               price: 5,
               type: 'fruta'
           },
           {
+              id: 2,
               name: 'Espárrago',
               price: 10,
               type: 'verdura'
           },
           {
+              id: 3,
               name: 'Cebolla',
               price: 11,
               type: 'verdura'
           },
           {
+             id: 4,
               name: 'Limón',
               price: 4,
               type: 'fruta'
           },
           {
+              id: 5,
               name: 'Plátano',
               price: 8,
               type: 'fruta'
           },
           {
+             id: 6,
               name: 'Zumo',
               price: 13,
               type: 'zumo'

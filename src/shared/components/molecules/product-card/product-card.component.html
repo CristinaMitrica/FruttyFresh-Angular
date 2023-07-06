@@ -1,1 +1,9 @@
-<p>product-card works!</p>
+<div class="product-card">
+  <div class="product-card__img-frame">
+      <img class="product-card__img" src="assets/images/{{product.name}}.jpg" alt="Producto {{product.name}} imagen" loading="lazy">
+  </div>
+  <h3 class="font--h3">{{product.name}}</h3>
+  <p>{{product.price}}€</p>
+  <button class="product-card__btn btn--filled" type="button" (click)="addProductToCart(product)">Añadir a la cesta</button>
+  <button class="product-card__btn btn--filled" type="button" (click)="removeProductFromCart(product)">Borrar de la cesta</button>
+</div>
