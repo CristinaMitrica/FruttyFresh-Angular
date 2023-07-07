@@ -15,26 +15,26 @@ export class CartService {
   public addProduct(product:Product):void {
     this.cart = [...this.cart, product];
     // this.cart.push(product)
-    this.updatecartCounter();
+    this.updateCartCounter();
   }
 
   public removeProduct({id}:Product):void {
     const index:number = this.cart.findIndex((product:Product) => product.id === id);
     if (index !== -1) {
       this.cart.splice(index, 1);
-      this.updatecartCounter();
+      this.updateCartCounter();
     }
   }
 
-  public getcart():Product[] {
+  public getCart():Product[] {
     return this.cart;
   }
 
-  public getcartCounter():Observable<number> {
+  public getCartCounter():Observable<number> {
     return this.cartCounter.asObservable();
   }
 
-  private updatecartCounter():void {
+  private updateCartCounter():void {
     this.cartCounter.next(this.cart.length);
   }
 }

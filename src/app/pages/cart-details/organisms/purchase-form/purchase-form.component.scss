@@ -1,0 +1,24 @@
+@import 'exports';
+
+.cart-checkout__a {
+  margin-bottom: var(--spacing-32);
+}
+
+.cart-checkout__icon-back {
+  --icon-color: var(--color-blue);
+}
+
+.cart-checkout__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-16);
+  padding: var(--spacing-16);
+  background-color: var(--color-low-grey);
+  border: var(--border-width-1) solid var(--color-black);
+  border-radius: var(--border-radius-4);
+
+  @include breakpoint($break-large) {
+      order: 1;
+  }
+}
+

@@ -8,13 +8,14 @@ import { CartService } from 'src/shared/services/cart.service';
   styleUrls: ['./product-card.component.scss']
 })
 export class ProductCardComponent {
-  @Input() public product!: Product;
+  
+  @Input() public product!:Product;
 
   constructor (
     private cartService: CartService,
   ) {}
 
-  public addProductToCart(product:Product):void {
-    this.cartService.addProduct(product);
+  public removeProductFromCart(product:Product):void {
+    this.cartService.removeProduct(product);
   }
 }

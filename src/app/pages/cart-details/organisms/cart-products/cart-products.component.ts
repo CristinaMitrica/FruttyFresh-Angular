@@ -4,16 +4,16 @@ import { CartService } from 'src/shared/services/cart.service';
 import { ProductsFetchService } from 'src/shared/services/fetchs/products-fetch.service';
 
 @Component({
-  selector: 'app-all-components',
-  templateUrl: './all-products.component.html',
-  styleUrls: ['./all-products.component.scss']
+  selector: 'app-cart-products',
+  templateUrl: './cart-products.component.html',
+  styleUrls: ['./cart-products.component.scss']
 })
-export class AllProductsComponent implements OnInit {
+
+export class CartProductsComponent implements OnInit {
   public products:Product[] = [];
 
   constructor (
     private cartService: CartService,
-    private productsFetchService:ProductsFetchService,
   ) {}
 
   ngOnInit():void {
@@ -21,8 +21,6 @@ export class AllProductsComponent implements OnInit {
   }
 
   private getProducts():void {
-    this.productsFetchService.getProducts().subscribe((response)=>{
-      this.products = response;
-    });
-  }
+    this.products = this.cartService.getCart();
+  };
 }

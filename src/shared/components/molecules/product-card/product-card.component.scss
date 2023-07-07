@@ -19,4 +19,8 @@
 
 .product-card__btn {
   background-color: var(--color-brown);
+
+  &:hover {
+    background-color: var(--color-strong-brown);
+  }
 }

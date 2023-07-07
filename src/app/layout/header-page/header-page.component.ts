@@ -7,7 +7,6 @@ import { CartService } from 'src/shared/services/cart.service';
   styleUrls: ['./header-page.component.scss']
 })
 export class HeaderPageComponent {
-  public title:string = 'Hola mundo';
   public cartCounter: number | null = null;
 
   constructor (
@@ -15,15 +14,14 @@ export class HeaderPageComponent {
   ) {}
 
   ngOnInit():void {
-    this.getcartCounter();
+    this.getCartCounter();
   }
 
-  private getcartCounter():void {
-    this.cartService.getcartCounter().subscribe((response) =>
+  private getCartCounter():void {
+    this.cartService.getCartCounter().subscribe((response) =>
       {
         this.cartCounter = response;
       }
     )
   }
-
 }

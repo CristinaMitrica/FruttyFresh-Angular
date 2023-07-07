@@ -1,0 +1,9 @@
+<div class="cart-checkout">
+  <h1 class="font--h1">Cesta de la compra</h1>
+  <h2 class="font--h2">4 productos en la cesta</h2>
+  <div class="cart-checkout__content">
+    <div class="cart-checkout__cards">
+      <app-cart-product-card *ngFor="let product of products" [product]="product"></app-cart-product-card>
+    </div>
+  </div>
+</div>
