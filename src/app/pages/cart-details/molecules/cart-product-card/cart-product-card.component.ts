@@ -15,7 +15,7 @@ export class CartProductCardComponent {
     private cartService: CartService,
   ) {}
 
-  public addProductToCart(product:Product):void {
-    this.cartService.addProduct(product);
+  public removeProductFromCart(product:Product):void {
+    this.cartService.removeProduct(product);
   }
 }

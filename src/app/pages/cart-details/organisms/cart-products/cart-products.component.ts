@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/shared/models/products.models';
 import { CartService } from 'src/shared/services/cart.service';
-import { ProductsFetchService } from 'src/shared/services/fetchs/products-fetch.service';
 
 @Component({
   selector: 'app-cart-products',

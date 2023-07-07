@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { CartService } from 'src/shared/services/cart.service';
 
 @Component({
   selector: 'app-purchase-form',
@@ -8,24 +9,25 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class PurchaseFormComponent {
 
-  public checkoutForm!:FormGroup;
+  public form!:FormGroup;
+  public cartCounter: number | null = null;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private cartService:CartService) { }
 
   ngOnInit():void {
     this.initForm();
   }
 
   private initForm():void {
-    this.checkoutForm = this.formBuilder.group({
+    this.form = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
     });
   }
 
   onSubmit():void {
-    if (this.checkoutForm.valid) {
+    if (this.form.valid) {
       // Realizar acciones con los datos del formulario
-      console.log(this.checkoutForm.value);
+      console.log(this.form.value);
     }
   }
 }

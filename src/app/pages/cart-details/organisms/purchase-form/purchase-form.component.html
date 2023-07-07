@@ -1,9 +1,8 @@
-<form class="cart-checkout__form" [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
-  <p>7 productos seleccionados</p>
+<form class="cart-details__form" [formGroup]="form" (ngSubmit)="onSubmit()">
   <h3 class="font--h3">Precio total 33€ (con IVA)</h3>
-  <div class="cart-checkout__input-field input-field">
+  <div class="cart-details__input-field input-field">
       <label class="input-field__label" for="email">Email</label>
       <input class="input-field__input" id="email" type="email" placeholder="nombre@gmail.com" />
   </div>
-  <button class="cart-checkout__btn btn--filled" type="submit">Comprar</button>
+  <button class="cart-details__btn btn--filled" type="submit">Comprar</button>
 </form>

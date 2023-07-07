@@ -5,6 +5,7 @@
       <button class="all-products__chip chip--unselected" type="button" data-filter='fruta'>Fruta</button>
       <button class="all-products__chip chip--unselected" type="button" data-filter='zumo'>Zumo</button>
   </div>
+  <h2 class="all-products__h2 font--h2">{{products.length}} resultados de productos</h2>
   <div class="all-products__cards">
     <app-product-card *ngFor="let product of products" [product]="product"></app-product-card>
   </div>
