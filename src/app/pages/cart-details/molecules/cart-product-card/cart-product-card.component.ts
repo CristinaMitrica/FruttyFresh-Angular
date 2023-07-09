@@ -9,13 +9,13 @@ import { CartService } from 'src/shared/services/cart.service';
 })
 export class CartProductCardComponent {
 
-  @Input() public product!:Product;
+  @Input() public product!: Product;
 
   constructor (
     private cartService: CartService,
   ) {}
 
-  public removeProductFromCart(product:Product):void {
+  public removeProductFromCart(product: Product): void {
     this.cartService.removeProduct(product);
   }
 }

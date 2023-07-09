@@ -9,17 +9,17 @@ import { CartService } from 'src/shared/services/cart.service';
 })
 
 export class CartProductsComponent implements OnInit {
-  public products:Product[] = [];
+  public products: Product[] = [];
 
   constructor (
     private cartService: CartService,
   ) {}
 
-  ngOnInit():void {
+  ngOnInit(): void {
     this.getProducts();
   }
 
-  private getProducts():void {
+  private getProducts(): void {
     this.products = this.cartService.getCart();
   };
 }

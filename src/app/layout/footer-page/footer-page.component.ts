@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer-page.component.scss']
 })
 export class FooterPageComponent {
-
+  constructor() {};
 }

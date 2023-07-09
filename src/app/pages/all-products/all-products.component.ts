@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/shared/models/products.models';
-import { CartService } from 'src/shared/services/cart.service';
 import { ProductsFetchService } from 'src/shared/services/fetchs/products-fetch.service';
+import { FiltersService } from './services/filters.service';
 
 @Component({
   selector: 'app-all-components',
@@ -9,20 +9,33 @@ import { ProductsFetchService } from 'src/shared/services/fetchs/products-fetch.
   styleUrls: ['./all-products.component.scss']
 })
 export class AllProductsComponent implements OnInit {
-  public products:Product[] = [];
+  public filteredProducts: Product[] = [];
+  private products: Product[] = [];
 
   constructor (
-    private cartService: CartService,
-    private productsFetchService:ProductsFetchService,
+    private productsFetchService: ProductsFetchService,
+    private filtersService: FiltersService,
   ) {}
 
-  ngOnInit():void {
+  ngOnInit(): void {
     this.getProducts();
   }
 
-  private getProducts():void {
+  public applyFilter(filter: string): void {
+    const filters: string[] = this.filtersService.handleFilters(filter);
+    this.filteredProducts = filters.length === 0
+      ? this.products
+      : this.products.filter((product: Product) => filters.includes(product.type));
+  }
+
+  public isFilterActive(filter: string): boolean {
+    return this.filtersService.isFilterActive(filter);
+  }
+
+  private getProducts(): void {
     this.productsFetchService.getProducts().subscribe((response)=>{
       this.products = response;
+      this.filteredProducts = response;
     });
   }
 }

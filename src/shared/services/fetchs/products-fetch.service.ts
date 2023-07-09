@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, first, map, of } from 'rxjs';
 import { Product } from 'src/shared/models/products.models';
@@ -7,7 +8,9 @@ import { Product } from 'src/shared/models/products.models';
 })
 export class ProductsFetchService {
 
-  constructor() { }
+  constructor(
+    private http: HttpClient,
+  ) {}
 
   public getProducts():Observable<Product[]> {
     return of(
@@ -49,7 +52,7 @@ export class ProductsFetchService {
               price: 13,
               type: 'zumo'
           }
-      ]
+        ]
       }
     ).pipe(
         map((res) => res.data),

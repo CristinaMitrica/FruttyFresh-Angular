@@ -1,0 +1,13 @@
+app-root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    padding-left: var(--spacing-32);
+    padding-right: var(--spacing-32);
+    padding-top: calc(var(--spacing-64));
+    padding-bottom: var(--spacing-64);
+    flex: 1;
+}

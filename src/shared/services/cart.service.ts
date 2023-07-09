@@ -6,19 +6,19 @@ import { Product } from 'src/shared/models/products.models';
   providedIn: 'root'
 })
 export class CartService {
-  private cart:Product[] = [];
+  private cart: Product[] = [];
 
-  private cartCounter:BehaviorSubject<number> = new BehaviorSubject(0);
+  private cartCounter: BehaviorSubject<number> = new BehaviorSubject(0);
 
-  constructor() { };
+  constructor() {};
 
-  public addProduct(product:Product):void {
+  public addProduct(product: Product): void {
     this.cart = [...this.cart, product];
     // this.cart.push(product)
     this.updateCartCounter();
   }
 
-  public removeProduct({id}:Product):void {
+  public removeProduct({id}: Product): void {
     const index:number = this.cart.findIndex((product:Product) => product.id === id);
     if (index !== -1) {
       this.cart.splice(index, 1);
@@ -26,15 +26,15 @@ export class CartService {
     }
   }
 
-  public getCart():Product[] {
+  public getCart(): Product[] {
     return this.cart;
   }
 
-  public getCartCounter():Observable<number> {
+  public getCartCounter(): Observable<number> {
     return this.cartCounter.asObservable();
   }
 
-  private updateCartCounter():void {
+  private updateCartCounter(): void {
     this.cartCounter.next(this.cart.length);
   }
 }

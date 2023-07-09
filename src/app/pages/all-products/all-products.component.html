@@ -1,12 +1,12 @@
 <div class="all-products">
   <h1 class="all-products__h1 font--h1">Todos los productos</h1>
   <div class="all-products__filters">
-      <button class="all-products__chip chip--unselected" type="button" data-filter='verdura'>Verdura</button>
-      <button class="all-products__chip chip--unselected" type="button" data-filter='fruta'>Fruta</button>
-      <button class="all-products__chip chip--unselected" type="button" data-filter='zumo'>Zumo</button>
+    <button class="all-products__chip" type="button" (click)="applyFilter('verdura')" [ngClass]="isFilterActive('verdura') ? 'chip--selected' : 'chip--unselected'">Verdura</button>
+    <button class="all-products__chip" type="button" (click)="applyFilter('fruta')" [ngClass]="isFilterActive('fruta') ? 'chip--selected' : 'chip--unselected'">Fruta</button>
+    <button class="all-products__chip" type="button" (click)="applyFilter('zumo')" [ngClass]="isFilterActive('zumo') ? 'chip--selected' : 'chip--unselected'">Zumo</button>
   </div>
-  <h2 class="all-products__h2 font--h2">{{products.length}} resultados de productos</h2>
+  <h2 class="all-products__h2 font--h2">{{filteredProducts.length}} resultados de productos</h2>
   <div class="all-products__cards">
-    <app-product-card *ngFor="let product of products" [product]="product"></app-product-card>
+    <app-product-card *ngFor="let product of filteredProducts" [product]="product"></app-product-card>
   </div>
 </div>

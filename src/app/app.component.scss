@@ -1,9 +1,0 @@
-@import 'exports';
-
-main {
-  padding-left: var(--spacing-32);
-  padding-right: var(--spacing-32);
-  padding-top: calc(var(--spacing-64));
-  padding-bottom: var(--spacing-64);
-  min-height: calc(100vh - var(--footer-height));
-}

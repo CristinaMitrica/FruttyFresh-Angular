@@ -17,11 +17,11 @@ export class HeaderPageComponent {
     this.getCartCounter();
   }
 
-  private getCartCounter():void {
+  private getCartCounter(): void {
     this.cartService.getCartCounter().subscribe((response) =>
       {
         this.cartCounter = response;
       }
-    )
+    );
   }
 }

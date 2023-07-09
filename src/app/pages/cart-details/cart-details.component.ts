@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./cart-details.component.scss']
 })
 export class CartDetailsComponent {
-
+  constructor() {};
 }
