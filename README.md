@@ -56,10 +56,6 @@ Durante el desarrollo del código en SCSS, se ha **validado que el código CSS r
 
 ![specificity](https://github.com/CristinaMitrica/FruttyFresh-JS-HTML-CSS-SCSS/assets/124876049/37ca0c14-e305-4dad-a985-17e7167df3a4)
 
-## Arquitectura
-
-![atomicDesign](https://github.com/CristinaMitrica/FruttyFresh-JS-HTML-CSS-SCSS/assets/124876049/9651788e-dad6-4516-837f-05c5dc57c525)
-
 ## Formación
 - OpenBootcamp. Curso de Angular.
 - OpenBootcamp. Curso de Javascript.
