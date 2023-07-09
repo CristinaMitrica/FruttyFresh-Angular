@@ -1,8 +1,12 @@
-<div class="product-card">
-  <div class="product-card__img-frame">
-      <img class="product-card__img" src="assets/images/{{product.name}}.jpg" alt="Producto {{product.name}} imagen" loading="lazy">
+<div class="cart-card">
+  <div class="cart-card__img-frame">
+      <img class="cart-card__img" src="assets/images/{{product.name}}.jpg" alt="Producto {{product.name}} imagen" loading="lazy">
   </div>
-  <h3 class="font--h3">{{product.name}}</h3>
-  <p>{{product.price}}€</p>
-  <button class="product-card__btn btn--filled" type="button" (click)="removeProductFromCart(product)">Eliminar de la cesta</button>
+  <div class="cart-card__text">
+    <div>
+      <h3 class="font--h3">{{product.name}}</h3>
+      <p>{{product.price}}€</p>
+    </div>
+    <button class="cart-card__btn btn--filled" type="button" (click)="removeProductFromCart(product)">Eliminar de la cesta</button>
+  </div>
 </div>

@@ -1,0 +1,6 @@
+@import 'exports';
+
+.cart-details__cards {
+  display: grid;
+  gap: var(--spacing-24);
+}

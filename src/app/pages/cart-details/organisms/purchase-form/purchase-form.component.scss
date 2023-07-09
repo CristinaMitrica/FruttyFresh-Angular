@@ -1,13 +1,5 @@
 @import 'exports';
 
-.cart-details__a {
-  margin-bottom: var(--spacing-32);
-}
-
-.cart-details__icon-back {
-  --icon-color: var(--color-blue);
-}
-
 .cart-details__form {
   display: flex;
   flex-direction: column;
@@ -19,6 +11,19 @@
 
   @include breakpoint($break-large) {
       order: 1;
+  }
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+.btn--filled {
+  &:hover {
+    background-color: var(--color-grey);
+    color: var(--color-black);
   }
 }
 
