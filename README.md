@@ -1,5 +1,5 @@
 # FruttyFresh
-Proyecto **Frontend** en **Javacript**, **HTML**, **CSS** y **SCSS** para la página web ficticia de FruttyFresh.
+Proyecto **Frontend** en **Angular**, **Typescript**, **Javacript**, **HTML**, **CSS** y **SCSS** para la página web ficticia de FruttyFresh.
 
 - **Herramientas**: Visual Studio Code, Figma, Chrome Dessarollador F12, Git Fork, Chat GTP. 
 
@@ -9,9 +9,22 @@ Proyecto **Frontend** en **Javacript**, **HTML**, **CSS** y **SCSS** para la pá
 Implementación basada en un diseño **Responsive** de **Figma**. Los estilos de los componentes se han obtenido a través de la herramienta de inspección de Figma y mediante el pluggin Locofy.ai, el cual permite exportar los Design Tokens.
 
 ![figma](https://github.com/CristinaMitrica/FruttyFresh-JS-HTML-CSS-SCSS/assets/124876049/83a3fb34-201c-43f5-aa20-73d24d6fc924)
+![Desktop](https://github.com/CristinaMitrica/FruttyFresh-Angular/assets/124876049/6284c8f7-fda0-443e-9dab-b8cf8e5ed1d6)
+
+## Angular y Typescript
+El código emplea buenas las prácticas de Angular y Typescript:
+- **Interfaces**
+- **Observables**
+- **Modules**
+- **Interfaces**
+- **ngIf, ngFor, ngClass**
+- **ngOnInit**
+- **Reactive Forms**
+- **Routing**
+- **@Input**
+- **Mocks**
 
 ## Javascript
-
 El código emplea buenas las prácticas de Javascript:
 - **Arrow Functions**
 - **Métodos de arrays (filter, includes, map, etc.)**
@@ -19,9 +32,6 @@ El código emplea buenas las prácticas de Javascript:
 - **Spread**
 - **Desestructuración**
 - **Ternarias**
-- **Queryselector y Event Listeners**
-- **Mocks**
-- **ESModules**
 - **Programación Orientada a Objetos**
 
 ## HTML
@@ -51,8 +61,9 @@ Durante el desarrollo del código en SCSS, se ha **validado que el código CSS r
 ![atomicDesign](https://github.com/CristinaMitrica/FruttyFresh-JS-HTML-CSS-SCSS/assets/124876049/9651788e-dad6-4516-837f-05c5dc57c525)
 
 ## Formación
-- OpenBootcamp. Curso de HTML y CSS.
+- OpenBootcamp. Curso de Angular.
 - OpenBootcamp. Curso de Javascript.
+- OpenBootcamp. Curso de HTML y CSS.
 - Udemy. Curso CSS La Guía Completa - Flexbox, CSS Grid, SASS +20 proyectos.
 - Udemy. Curso de Principios SOLID y Clean Code.
 
