@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { PostCart } from 'src/shared/models/post-card.model';
 import { Product } from 'src/shared/models/products.models';
@@ -11,13 +11,13 @@ import { CartFetchService } from 'src/shared/services/fetchs/cart-fetch.service'
   templateUrl: './purchase-form.component.html',
   styleUrls: ['./purchase-form.component.scss']
 })
-export class PurchaseFormComponent {
+export class PurchaseFormComponent implements OnInit {
 
   public form!: FormGroup;
   public cartCounter: number | null = null;
 
   constructor(
-    private formBuilder: FormBuilder, 
+    private formBuilder: FormBuilder,
     private cartService: CartService,
     private cartFetchService: CartFetchService
   ) {}

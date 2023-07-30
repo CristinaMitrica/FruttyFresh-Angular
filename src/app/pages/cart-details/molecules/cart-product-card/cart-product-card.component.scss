@@ -4,11 +4,11 @@
   display: grid;
   gap: var(--spacing-12);
 
-  @include breakpoint($break-small) {
+  @include breakpoint($break-480) {
       grid-template-columns: 1fr 3fr;
   }
 
-  @include breakpoint($break-large) {
+  @include breakpoint($break-992) {
       grid-template-columns: pxToRem(216px) 1fr;
   }
 }
@@ -30,7 +30,7 @@
   justify-content: space-between;
   gap: var(--spacing-8);
 
-  @include breakpoint($break-medium) {
+  @include breakpoint($break-768) {
       flex-direction: row;
       justify-content: space-between;
   }

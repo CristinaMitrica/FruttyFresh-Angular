@@ -4,7 +4,7 @@
   display: grid;
   gap: var(--spacing-32);
 
-  @include breakpoint($break-large) {
+  @include breakpoint($break-992) {
       grid-template-columns: 2fr 1fr;
       gap: var(--spacing-48);
   }
@@ -19,7 +19,7 @@
 }
 
 .cart-details__purchase-form {
-  @include breakpoint($break-large) {
+  @include breakpoint($break-992) {
     order: 1;
   }
 }

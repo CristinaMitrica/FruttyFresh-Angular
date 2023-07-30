@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CartService } from 'src/shared/services/cart.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { CartService } from 'src/shared/services/cart.service';
   templateUrl: './header-page.component.html',
   styleUrls: ['./header-page.component.scss']
 })
-export class HeaderPageComponent {
+export class HeaderPageComponent implements OnInit {
   public cartCounter: number | null = null;
 
   constructor (

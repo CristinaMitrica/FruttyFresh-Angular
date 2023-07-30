@@ -7,7 +7,7 @@
   text-align: center;
   margin-bottom: var(--spacing-32);
 
-  @include breakpoint($break-small) {
+  @include breakpoint($break-480) {
       display: flex;
   }
 }
